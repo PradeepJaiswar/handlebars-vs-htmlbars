@@ -1,0 +1,7 @@
+{{full-name "Daniel" model.lastName}}
+{{my-component name=(full-name model.firstName "Smith")}}
+{{! The following usage would set the model.name to the new full name
+    when my-component calls the submit action. }}
+{{my-component submit=(action (mut model.name) (full-name model.firstName "Smith"))}}
+
+

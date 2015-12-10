@@ -1,3 +1,22 @@
-<h2 id="title">Welcome to Ember</h2>
+<header id="header">
+<h2>HTML<span style='color:red'>bars</span> IN ACTION </h2>
 
-{{outlet}}
+{{#if (eq hello "mado")}} this wokrs {{/if}}
+
+</header>
+<div id="wrapper">
+	<div id="content">{{outlet}}
+</div>
+<div id="sidebar">
+ 
+	{{#each link in links}}
+    <div id="cleared" class='list'>{{#link-to link.linkTo  }} {{link.title}}  {{/link-to}}</div>
+  {{/each}}
+
+</div>
+<div id="cleared"></div>
+</div>
+
+
+
+

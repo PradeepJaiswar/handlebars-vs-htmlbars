@@ -1,0 +1,13 @@
+{{code-snippet name="updateHierarchy.hbs"}}
+
+<div class='title'>Handlebar </div>
+<div class='code'>
+
+Handlebars does not understand view hierarchy for data-binding. So if we update photo to null, {{photo.thumbUrl}} will be triggered for updates too. This will result in a invalid request.
+
+</div>
+
+<div  class='title' >HTMLbars </div>
+<div  class='code'>
+HTMLBars makes sure the view understand the hierarchy such that it will only trigger valid updates.
+</div>

@@ -1,0 +1,9 @@
+{{code-snippet name="each1.hbs"}}
+
+<div class='code'> 
+Instead of creating and populating the document fragment for each node li, the fragment is first created and cached once without the dynamic parts filled in.
+
+Next, each node is deep-cloned from the cached fragment before populating them individually. This process is call 'hydration'.
+
+As cloning is a faster process than manual creation of document fragments, this will dramatically increase the rendering performance for EmberJS
+</div>

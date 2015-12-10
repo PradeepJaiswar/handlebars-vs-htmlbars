@@ -1,0 +1,36 @@
+<div class='title'>Handlebar </div>
+<div class='code'>
+
+Before version 1.8.0, EmberJS's handlebar compiler used string concatenation to render the view.
+
+<ul>
+<li>The compiler takes in a string template and generates out an abstract syntax tree(AST).</li>
+<li>
+This AST is passed off to the render tree to assemble the dynamic parts (marking section with script tags etc.).</li>
+<li>The render tree will emits a string which will be inserted into the DOM via the innerHTML function.
+</li>
+<li>The browser will then parse the string into DOM objects.</li>
+
+</ul>
+
+<img  src='handlebars-work-flow.png' >
+
+
+<p>Why is this bad? </p>
+
+<p>After the generated string enters the DOM, you have no control on its context/reference after they are parsed as DOM objects. So how does EmberJS do data-binding? </p>
+
+<p>
+EmberJS uses a library,metamorph.js, which wraps script tags around regions of data-bound content. This allows EmberJS to have context for manipulation later on. This seems clever because script tags have cross-browser support and it doesn't affects layout. However, in hindsight, this was a frustrating issue for frontend developers. I will touch more on that later.
+</p>
+
+</div>
+
+<div  class='title'>HTMLbars</div>
+<div  class='code'>
+<img  src='htmlbars-work-flow.png' >
+</div>
+
+from = > http://jsfiddle.net/metalshan/k44q00wa/3/light/
+
+<iframe style="height:700px; width:100%" src="http://jsfiddle.net/metalshan/k44q00wa/3/light/"></iframe>

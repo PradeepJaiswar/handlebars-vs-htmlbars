@@ -1,0 +1,9 @@
+In your controller:
+
+dynamicSearchUrl: function() {
+    return '/users/' + this.get('someDynamicId') + '/books/search';
+}.property('someDynamicId')
+
+In your template:	
+
+{{view App.TokenAutoCompleteView searchUrl=dynamicSearchUrl ... }}

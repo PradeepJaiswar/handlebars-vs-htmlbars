@@ -1,0 +1,11 @@
+//The template is like this. myClass and myValue are two controller properties.
+<div class="{{myClass}}">{{myValue}}</div>
+ 
+//This is how htmlbars works
+var output = dom.createDocumentFragment();
+var div = dom.createElement('div');
+dom.RESOLVE_ATTR(context, div, 'class', 'myClass');
+var text = dom.createTextNode();
+dom.RESOLVE(context, text, 'textContent', 'myValue');
+div.appendChild(text);
+output.appendChild(div);

@@ -1,0 +1,16 @@
+
+App.View = Ember.View.extend({
+    style: function() {
+      return "background-color:" + this.get('color');
+    }.property('color').cacheable()
+});
+
+OR
+
+myStyle: Ember.computed('color', function() {
+
+var color = escapeCSS(this.get('color'));
+
+return new Ember.Handlebars.SafeString("color: " + color);
+
+})

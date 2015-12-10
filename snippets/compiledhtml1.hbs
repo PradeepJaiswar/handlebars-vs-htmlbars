@@ -1,0 +1,14 @@
+//The template is like this. myClass and myValue are two controller properties.
+<div {{bind-attr class="myClass"}}>{{myValue}}</div>
+ 
+//This is how handlebars works
+var output = "";
+output.push("<div class=\"");
+output.push("<script type='text/x-placeholder' id='start-1'></script>");
+// insert the value of myClass
+output.push("<script type='text/x-placeholder' id='end-1'></script>");
+output.push("\">");
+output.push("<script type='text/x-placeholder' id='start-2'></script>");
+// insert the value of myValue
+output.push("<script type='text/x-placeholder' id='end-2'></script>");
+output.push("</div>");
