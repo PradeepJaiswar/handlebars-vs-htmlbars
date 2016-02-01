@@ -1,7 +1,6 @@
 # Htmlbars
 
-This README outlines the details of collaborating on this Ember application.
-A short introduction of this app could easily go here.
+If you are looking for something on ember templating this is right place. The demo project has the comparison between handlebar and new HTMLbar.It also have the decent topic of new glimmer templating engine.
 
 ## Prerequisites
 
